@@ -2,12 +2,17 @@
 @use 'partials/mixins' as *;
 @use 'partials/fonts' as *;
 @use 'partials/colors' as *;
+@use 'partials/typography' as *;
 
-@use 'partials/fonts' as *;
+* {
+    margin: 0;
+    padding: 0; 
+}
 
 
 .photo{
     width: 100%;
+    padding-bottom: 1rem;
 }
 
 a{
@@ -22,19 +27,22 @@ a{
 .header-logo {
     background-color:$primary-color-black;
     color:$primary-color-white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    
     
 
     &__img{
-        
-        max-height: 20px;
-        max-width: 120px;
-    
+        max-height: 1.25rem;
+        max-width: 7.5rem;
+        margin: 1rem;
     }
 }
 
 .hero {
     display: flex;
-
     
     &__image {
         background-image: url('../assets/images/hero-bio.jpg');
@@ -48,23 +56,44 @@ a{
         padding-bottom: 56.25%;
 
     }
-
     &__title {
         color:$primary-color-white;
         font-family: Avenir Next Regular;
-        padding:16px;
+        padding:1rem;
     }
 }
 
 .nav {  
+    display: flex;
+    list-style: none;
+    padding: 0;
+    width:100% ;
     
 
     &__menu {
         list-style: none;
+        display: flex;
+        padding-left: 0;
+        width: 100%;
+        justify-content: space-evenly;
+        
     }
 
     &__menu-item {
-        
+        width: 50%;
         color: $primary-color-white;
+        text-align: center;
+    }
+    &__menu-item--underline{
+        border-bottom: solid;
     }
 }
+
+
+
+.footer {
+    background-color:$primary-color-black;
+    color:$primary-color-white;
+    &__title {}
+}
+

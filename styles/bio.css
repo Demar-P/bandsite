@@ -13,8 +13,14 @@
   src: url(/assets/fonts/AvenirNextLTPro-Bold.otf);
   font-weight: 700;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .photo {
   width: 100%;
+  padding-bottom: 1rem;
 }
 
 a {
@@ -25,10 +31,15 @@ a {
 .header-logo {
   background-color: #323232;
   color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 .header-logo__img {
-  max-height: 20px;
-  max-width: 120px;
+  max-height: 1.25rem;
+  max-width: 7.5rem;
+  margin: 1rem;
 }
 
 .hero {
@@ -48,12 +59,32 @@ a {
 .hero__title {
   color: #FFFFFF;
   font-family: Avenir Next Regular;
-  padding: 16px;
+  padding: 1rem;
 }
 
+.nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
 .nav__menu {
   list-style: none;
+  display: flex;
+  padding-left: 0;
+  width: 100%;
+  justify-content: space-evenly;
 }
 .nav__menu-item {
+  width: 50%;
+  color: #FFFFFF;
+  text-align: center;
+}
+.nav__menu-item--underline {
+  border-bottom: solid;
+}
+
+.footer {
+  background-color: #323232;
   color: #FFFFFF;
 }/*# sourceMappingURL=bio.css.map */
