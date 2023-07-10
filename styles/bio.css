@@ -1,3 +1,59 @@
+@font-face {
+  font-family: Avenir Next Regular;
+  src: url(/assets/fonts/AvenirNextLTPro-Regular.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Avenir Next Demi;
+  src: url(/assets/fonts/AvenirNextLTPro-Demi.otf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: Avenir Next Bold;
+  src: url(/assets/fonts/AvenirNextLTPro-Bold.otf);
+  font-weight: 700;
+}
 .photo {
   width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.header-logo {
+  background-color: #323232;
+  color: #FFFFFF;
+}
+.header-logo__img {
+  max-height: 20px;
+  max-width: 120px;
+}
+
+.hero {
+  display: flex;
+}
+.hero__image {
+  background-image: url("../assets/images/hero-bio.jpg");
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.hero__title {
+  color: #FFFFFF;
+  font-family: Avenir Next Regular;
+  padding: 16px;
+}
+
+.nav__menu {
+  list-style: none;
+}
+.nav__menu-item {
+  color: #FFFFFF;
 }/*# sourceMappingURL=bio.css.map */
