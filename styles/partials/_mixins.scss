@@ -38,8 +38,40 @@
 }
 
 @mixin footerfont-mobile{
+    
     $footer-size: .625rem;
     $footer-line-height: 1.25rem;
     $footer-weight: 700;
 }
 
+@mixin PageHeader-desktop{
+    $body-size: 2.25rem;
+    $body-line-height: 1.375rem;
+    $body-weight: 400;
+} 
+
+@mixin sectionHeaderfont-desktop{
+    $body-size: 2rem;
+    $body-line-height: 1.375rem;
+    $body-weight: 400;
+}
+
+@mixin subheaderfont-desktop{
+    $body-size: 1.375rem;
+    $body-line-height: 1.375rem;
+    $body-weight: 400;
+
+}
+
+@mixin bodyfont-desktop{
+    $body-size: .875rem;
+    $body-line-height: 1.125rem;
+    $body-weight: 400;
+
+}
+
+@mixin footerfont-desktop{
+    $footer-size: .875rem;
+    $footer-line-height: 1.25rem;
+    $footer-weight: 700;
+}

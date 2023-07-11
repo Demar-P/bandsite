@@ -98,6 +98,8 @@ a{
         color: $primary-color-white;
         text-align: center;
         @include headerfont-mobile;
+
+
     }
     &__menu-item--underline{
         border-bottom: solid;
@@ -113,12 +115,22 @@ a{
     &__paragraph {
         font-family: Avenir Next Regular;
         font-weight: 400;
-
         padding-top: 1rem;
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            @include sectionHeaderfont-desktop;
+
     }
 
     &__title {
     @include sectionHeaderfont-mobile;
+
+    @include tablet{
+        display: flex;
+
+        @include sectionHeaderfont-desktop;
 
     }
 }
@@ -130,6 +142,10 @@ a{
     &__text {
         @include subheaderfont-mobile;
         
+        @include tablet{
+            @include subheaderfont-desktop;
+
+        }
         
         
         
@@ -141,6 +157,9 @@ a{
         padding-top: 1.5rem;
         @include sectionHeaderfont-mobile;
         
+        @include tablet{
+            @include sectionHeaderfont-desktop;
+        }
         
     }
 }
@@ -153,6 +172,7 @@ a{
     &__title {
         padding-bottom: 1rem;
     }
+
     &__image{
 
         width: 100%;
@@ -175,6 +195,11 @@ a{
     color:$primary-color-white;
     box-sizing: border-box;
     @include footerfont-mobile;
+
+    @include tablet{
+        @include footerfont-desktop
+    }
+    
     &__title {
 
     }
@@ -190,5 +215,8 @@ a{
     display: flex;
     width: 50%;
     justify-content: space-around;
-    &__icons {}
+    
+    &__icons {
+
+    }
 }
