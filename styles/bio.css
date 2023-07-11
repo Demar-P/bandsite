@@ -31,8 +31,7 @@ a {
 .header {
   width: 100%;
 }
-
-.header-logo {
+.header .header-logo {
   background-color: #323232;
   color: #FFFFFF;
   display: flex;
@@ -40,7 +39,14 @@ a {
   align-content: center;
   align-items: center;
 }
-.header-logo__img {
+@media screen and (min-width: 768px) {
+  .header .header-logo {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+  }
+}
+.header__img {
   max-height: 1.25rem;
   max-width: 7.5rem;
   margin: 1rem;
@@ -120,6 +126,20 @@ a {
 }
 .photo-gallery__title {
   padding-bottom: 1rem;
+}
+.photo-gallery__image {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .photo-gallery__image {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .photo-gallery__image {
+    margin-left: 2%;
+  }
 }
 
 .footer {
