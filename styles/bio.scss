@@ -11,6 +11,10 @@
 
 
 .photo{
+    // margin-left: 16px;
+    // margin-right: 16px;
+
+    //padding-right: 1rem;
     width: 100%;
     padding-bottom: 1rem;
 }
@@ -21,6 +25,7 @@ a{
 }
 
 .header {
+    width: 100%;
     
 }
 
@@ -60,6 +65,7 @@ a{
         color:$primary-color-white;
         font-family: Avenir Next Regular;
         padding:1rem;
+
     }
 }
 
@@ -90,10 +96,70 @@ a{
 }
 
 
+.bio-section {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+
+    &__paragraph {
+        font-family: Avenir Next Regular;
+        font-weight: 400;
+;
+        padding-top: 1rem;
+    }
+
+    &__title {
+        font-family: Avenir Next Demi;
+        font-weight: 700;
+        // padding-left: 1rem;
+        //padding-right: 1rem;
+    }
+}
+
+.intro { 
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    &__text {
+        padding-left: 1rem;
+        //padding-right: 1rem;
+        padding-bottom: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        padding-top: 1.5rem;
+        padding-left: 1rem;
+        //padding-right: 1rem;
+        
+    }
+}
+
+
+.photo-gallery {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 1.5rem;
+    background-color: $secondary-color-alabaster;
+    &__title {
+        padding-left: 1rem;
+        //padding-right: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
 
 .footer {
+    // margin-left: 16px;
+    // margin-right: 16px;
+    width: 100%;
+    // padding: 1rem;
+    
     background-color:$primary-color-black;
     color:$primary-color-white;
-    &__title {}
+    &__title {
+
+    }
 }
 

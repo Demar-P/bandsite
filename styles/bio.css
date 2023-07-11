@@ -28,6 +28,10 @@ a {
   color: #FFFFFF;
 }
 
+.header {
+  width: 100%;
+}
+
 .header-logo {
   background-color: #323232;
   color: #FFFFFF;
@@ -84,7 +88,49 @@ a {
   border-bottom: solid;
 }
 
+.bio-section {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+}
+.bio-section__paragraph {
+  font-family: Avenir Next Regular;
+  font-weight: 400;
+  padding-top: 1rem;
+}
+.bio-section__title {
+  font-family: Avenir Next Demi;
+  font-weight: 700;
+}
+
+.intro {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.intro__text {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+}
+.intro__title {
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+}
+
+.photo-gallery {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-top: 1.5rem;
+  background-color: #FAFAFA;
+}
+.photo-gallery__title {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
 .footer {
+  width: 100%;
   background-color: #323232;
   color: #FFFFFF;
 }/*# sourceMappingURL=bio.css.map */
