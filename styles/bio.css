@@ -46,6 +46,14 @@ a {
   margin: 1rem;
 }
 
+.hero__overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #323232 0, 0, 0, 0.5;
+}
+
 .hero {
   display: flex;
 }
@@ -91,41 +99,26 @@ a {
 .bio-section {
   margin-left: 1rem;
   margin-right: 1rem;
-  padding: 1rem;
 }
 .bio-section__paragraph {
   font-family: Avenir Next Regular;
   font-weight: 400;
   padding-top: 1rem;
 }
-.bio-section__title {
-  font-family: Avenir Next Demi;
-  font-weight: 700;
-}
-
 .intro {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-.intro__text {
-  padding-left: 1rem;
-  padding-bottom: 1rem;
-  padding-top: 1.5rem;
-}
 .intro__title {
   margin-bottom: 1rem;
   padding-top: 1.5rem;
-  padding-left: 1rem;
 }
 
 .photo-gallery {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  padding-top: 1.5rem;
+  padding: 1rem;
   background-color: #FAFAFA;
 }
 .photo-gallery__title {
-  padding-left: 1rem;
   padding-bottom: 1rem;
 }
 
@@ -133,4 +126,10 @@ a {
   width: 100%;
   background-color: #323232;
   color: #FFFFFF;
+  box-sizing: border-box;
+}
+.social-media {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
 }/*# sourceMappingURL=bio.css.map */
