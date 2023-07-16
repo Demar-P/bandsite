@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'fonts' as *;
 
 @mixin tablet {
     @media screen and (min-width: $tablet-breakpoint) {
@@ -11,3 +12,142 @@
     @content;
     }
 }
+
+
+
+@mixin font-page-header-mobile {
+    font-family: 'Avenir Next Bold';
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+@mixin font-page-header-desktop {
+    font-family: 'Avenir Next Bold';
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+}
+
+@mixin font-section-header-mobile {
+    font-family: 'Avenir Next Bold';
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+@mixin font-section-header-desktop {
+    font-family: 'Avenir Next Bold';
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+}
+
+@mixin font-subheader-mobile {
+    font-family: 'Avenir Next Demi';
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+@mixin font-subheader-desktop {
+    font-family: 'Avenir Next Demi';
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+@mixin font-body-mobile {
+    font-family: 'Avenir Next Regular';
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+@mixin font-body-desktop {
+    font-family: 'Avenir Next Regular';
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+@mixin font-footer-mobile {
+    font-family: 'Avenir Next Regular';
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+@mixin font-footer-desktop {
+    font-family: 'Avenir Next Regular';
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+
+
+
+// @mixin headerfont-mobile{
+//     $page-header-size: 1.5rem;
+//     $page-header-line-height: 2rem;
+//     $page-header-weight: 700;
+// }
+
+// @mixin sectionHeaderfont-mobile{
+//     $section-header-size: .875rem;
+//     $section-header-line-height: 1.375rem;
+//     $section-header-weight: 600;
+// }
+
+// @mixin subheaderfont-mobile{
+//     $subheader-size: .8125rem;
+//     $subheader-line-height: 1.125rem;
+//     $subheader-weight: 400;
+// }
+
+// @mixin bodyfont-mobile{
+//     $body-size: .8125rem;
+//     $body-line-height: 1.125rem;
+//     $body-weight: 400;
+
+// }
+
+// @mixin footerfont-mobile{
+    
+//     $footer-size: .625rem;
+//     $footer-line-height: 1.25rem;
+//     $footer-weight: 700;
+// }
+
+// @mixin PageHeader-desktop{
+//     $body-size: 2.25rem;
+//     $body-line-height: 1.375rem;
+//     $body-weight: 400;
+// } 
+
+// @mixin sectionHeaderfont-desktop{
+//     $body-size: 2rem;
+//     $body-line-height: 1.375rem;
+//     $body-weight: 400;
+// }
+
+// @mixin subheaderfont-desktop{
+//     $body-size: 1.375rem;
+//     $body-line-height: 1.375rem;
+//     $body-weight: 400;
+
+// }
+
+// @mixin bodyfont-desktop{
+//     $body-size: .875rem;
+//     $body-line-height: 1.125rem;
+//     $body-weight: 400;
+
+// }
+
+// @mixin footerfont-desktop{
+//     $footer-size: .875rem;
+//     $footer-line-height: 1.25rem;
+//     $footer-weight: 700;
+// }
