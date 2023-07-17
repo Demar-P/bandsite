@@ -19,36 +19,40 @@ let comments = [
 const commentEl = document.querySelector(".comment-container");
 
     const displayComment = (comment) => {
+        
+
     let commentArticle = document.createElement("article");
-    commentArticle.classList.add("comments__article");
-    commentEl.appendChild(commentArticle);
+        commentArticle.classList.add("comments__article");
+        commentEl.appendChild(commentArticle);
 
     let pName = document.createElement("p");
-    pName.classList.add("comments__name");
-    pName.innerText = comment.name;
-    commentArticle.appendChild(pName);
+        pName.classList.add("comments__name");
+        pName.innerText = comment.name;
+        commentArticle.appendChild(pName);
 
     let pDate = document.createElement("p");
-    pDate.classList.add("comments__date");
-    pDate.innerText = comment.date;
-    commentArticle.appendChild(pDate);
+        pDate.classList.add("comments__date");
+        pDate.innerText = comment.date;
+        commentArticle.appendChild(pDate);
 
     let pDescription = document.createElement("p");
-    pDescription.classList.add("comments__description");
-    pDescription.innerText = comment.comment; // Updated property name to 'comment'
-    commentArticle.appendChild(pDescription);
+        pDescription.classList.add("comments__description");
+        pDescription.innerText = comment.comment; 
+        commentArticle.appendChild(pDescription);
+
+    
     };
 
-    comments.forEach((comment) => {
-    displayComment(comment);
+        comments.forEach((comment) => {
+        displayComment(comment);
     });
 
 
-// function updatecomment(comment){
-//     let commentdivEL = document.createElement('div')
-//     commentdiv.classList.add('commentdiv')
-//     commentSection.appendChild(commentdivEL)
-//     return commentdiv
+function updatecomment(comment){
+    let commentdivEL = document.createElement('div')
+    commentdiv.classList.add('commentdiv')
+    commentSection.appendChild(commentdivEL)
+    return commentdiv
 
 //     let name =document.createElement('p')
 //     name.classList.add('name')

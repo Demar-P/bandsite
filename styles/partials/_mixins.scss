@@ -13,7 +13,6 @@
     }
 }
 
-<<<<<<< HEAD
 
 
 @mixin font-page-header-mobile {
@@ -152,68 +151,3 @@
 //     $footer-line-height: 1.25rem;
 //     $footer-weight: 700;
 // }
-=======
-@mixin headerfont-mobile{
-    $page-header-size: 1.5rem;
-    $page-header-line-height: 2rem;
-    $page-header-weight: 700;
-}
-
-@mixin sectionHeaderfont-mobile{
-    $section-header-size: .875rem;
-    $section-header-line-height: 1.375rem;
-    $section-header-weight: 600;
-}
-
-@mixin subheaderfont-mobile{
-    $subheader-size: .8125rem;
-    $subheader-line-height: 1.125rem;
-    $subheader-weight: 400;
-}
-
-@mixin bodyfont-mobile{
-    $body-size: .8125rem;
-    $body-line-height: 1.125rem;
-    $body-weight: 400;
-
-}
-
-@mixin footerfont-mobile{
-    
-    $footer-size: .625rem;
-    $footer-line-height: 1.25rem;
-    $footer-weight: 700;
-}
-
-@mixin PageHeader-desktop{
-    $body-size: 2.25rem;
-    $body-line-height: 1.375rem;
-    $body-weight: 400;
-} 
-
-@mixin sectionHeaderfont-desktop{
-    $body-size: 2rem;
-    $body-line-height: 1.375rem;
-    $body-weight: 400;
-}
-
-@mixin subheaderfont-desktop{
-    $body-size: 1.375rem;
-    $body-line-height: 1.375rem;
-    $body-weight: 400;
-
-}
-
-@mixin bodyfont-desktop{
-    $body-size: .875rem;
-    $body-line-height: 1.125rem;
-    $body-weight: 400;
-
-}
-
-@mixin footerfont-desktop{
-    $footer-size: .875rem;
-    $footer-line-height: 1.25rem;
-    $footer-weight: 700;
-}
->>>>>>> 6dc28076d69284ac0768e75642f3f2946981418d
