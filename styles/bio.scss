@@ -12,7 +12,11 @@
 
 .photo {
     width: 100%;
+<<<<<<< HEAD
     padding-bottom: 16px;
+=======
+    padding-bottom: 1rem;
+>>>>>>> 6dc28076d69284ac0768e75642f3f2946981418d
 }
 
 a {
@@ -22,6 +26,7 @@ a {
 
 .header {
     width: 100%;
+<<<<<<< HEAD
 
     .header-logo {
         background-color: $primary-color-black;
@@ -73,6 +78,30 @@ a {
         text-align: center;
         padding-bottom: 1rem;
     
+=======
+
+.header-logo {
+    background-color:$primary-color-black;
+    color:$primary-color-white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+    }
+    
+}
+
+
+    &__img{
+        max-height: 1.25rem;
+        max-width: 7.5rem;
+        margin: 1rem;
+>>>>>>> 6dc28076d69284ac0768e75642f3f2946981418d
     }
 
     &__menu-item--underline {
@@ -88,6 +117,13 @@ a {
     background-color: #323232(0,0,0,0.5);
 }
 
+.hero__overlay{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #323232(0,0,0,0.5);
+}
 .hero {
     display: flex;
     
@@ -102,10 +138,10 @@ a {
         height: 0;
         padding-bottom: 56.25%;
     }
-
     &__title {
         color: $primary-color-white;
         font-family: Avenir Next Regular;
+<<<<<<< HEAD
         padding: 16px;
     }
 }
@@ -145,10 +181,44 @@ a {
         padding-left: 16px;
         @include font-subheader-mobile;
     
+=======
+        padding:1rem;
+
+    }
+}
+
+.nav {  
+    display: flex;
+    list-style: none;
+    padding: 0;
+    width:100% ;
+    
+
+    &__menu {
+        list-style: none;
+        display: flex;
+        padding-left: 0;
+        width: 100%;
+        justify-content: space-evenly;
+        
+    }
+
+    &__menu-item {
+        width: 50%;
+        color: $primary-color-white;
+        text-align: center;
+        @include headerfont-mobile;
+
+
+    }
+    &__menu-item--underline{
+        border-bottom: solid;
+>>>>>>> 6dc28076d69284ac0768e75642f3f2946981418d
     }
 }
 
 
+<<<<<<< HEAD
 
 .intro {
     margin-left: 16px;
@@ -306,5 +376,118 @@ a {
         &__icons {
             padding-top: 16px;
         
+=======
+.bio-section {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+
+    &__paragraph {
+        font-family: Avenir Next Regular;
+        font-weight: 400;
+        padding-top: 1rem;
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            @include sectionHeaderfont-desktop;
+
+    }
+
+    &__title {
+    @include sectionHeaderfont-mobile;
+
+    @include tablet{
+        display: flex;
+
+        @include sectionHeaderfont-desktop;
+
+    }
+}
+
+.intro { 
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    &__text {
+        @include subheaderfont-mobile;
+        
+        @include tablet{
+            @include subheaderfont-desktop;
+
+        }
+        
+        
+        
+        
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        padding-top: 1.5rem;
+        @include sectionHeaderfont-mobile;
+        
+        @include tablet{
+            @include sectionHeaderfont-desktop;
+        }
+        
+    }
+}
+
+
+.photo-gallery{
+
+    padding: 1rem;
+    background-color: $secondary-color-alabaster;
+    &__title {
+        padding-bottom: 1rem;
+    }
+
+    &__image{
+
+        width: 100%;
+        padding-bottom: 1rem;
+
+        @include tablet{
+            width: 30%;
+        }
+        @include desktop{
+            margin-left:2%;
+        }
+
+    }
+}
+
+
+.footer {
+    width: 100%;
+    background-color:$primary-color-black;
+    color:$primary-color-white;
+    box-sizing: border-box;
+    @include footerfont-mobile;
+
+    @include tablet{
+        @include footerfont-desktop
+    }
+    
+    &__title {
+
+    }
+}
+
+.footer-cam {}
+
+.footer-carson {}
+
+.footer-pearl {}
+
+.social-media {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    
+    &__icons {
+
+>>>>>>> 6dc28076d69284ac0768e75642f3f2946981418d
     }
 }
