@@ -12,12 +12,12 @@
 
 .photo {
     width: 100%;
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
 }
 
 a {
     text-decoration: none;
-    color: $primary-color-white;
+    color: inherit;
 }
 
 .header {
@@ -38,7 +38,7 @@ a {
         }
         
         @include tablet {
-            padding-left: 24px;
+            padding-left: 1.5rem;
             flex-direction: row;
             justify-content: space-evenly;
             align-content: space-evenly;
@@ -46,9 +46,9 @@ a {
     }
 
     &__img {
-        max-height: 20px;
-        max-width: 120px;
-        margin: 16px;
+        max-height: 1.25rem;
+        max-width: 7.5rem;
+        margin: 1rem;
         padding-bottom: 1rem;
     }
 }
@@ -70,7 +70,7 @@ a {
 
     &__menu-item {
         width: 50%;
-        color: $primary-color-white;
+        color: $secondary-color-mercury;
         text-align: center;
         padding-bottom: 1rem;
         @include tablet{
@@ -80,6 +80,7 @@ a {
 
     &__menu-item--underline {
         border-bottom: solid;
+        color: $primary-color-white;
     }
 }
 
@@ -117,7 +118,7 @@ a {
     &__title {
         color: $primary-color-white;
         font-family: Avenir Next Regular;
-        padding: 16px;
+        padding: 1rem;
     }
 }
 
@@ -131,29 +132,32 @@ a {
     &__paragraph {
         display: flex;
         flex-direction: column;
+        
         @include font-body-mobile;
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         
         @include tablet{
             display: flex;
             flex-direction: row;
             @include font-body-desktop;
-            padding-left: 24px;
-            padding-right: 24px;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
         }
 
 
 
         &--text {
-            padding-bottom: 16px;
-            padding-right: 24px;
-            padding-left: 24px;
+            color: $primary-color-black;
+            padding-bottom: 1rem;
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;
         }
     }
 
     &__title {
-        padding-left: 16px;
+        color: $primary-color-black;
+        padding-left: 1rem;
         @include font-subheader-mobile;
     
     }
@@ -162,12 +166,13 @@ a {
 
 
 .intro {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 1rem;
+    margin-right: 1rem;
     
 
     &__text {
-        padding-bottom: 16px;
+        color: $primary-color-black;
+        padding-bottom: 1rem;
         @include font-subheader-mobile;
 
         @include tablet {
@@ -177,12 +182,13 @@ a {
 
     &__photo {
         width: 100%;
-        padding-bottom: 16px;    
+        padding-bottom: 1rem;    
     }
 
     &__title {
-        margin-bottom: 16px;
-        padding-top: 24px;
+        color: $primary-color-black;
+        margin-bottom: 1rem;
+        padding-top: 1.5rem;
         @include font-section-header-mobile;
 
         @include tablet {
@@ -193,7 +199,7 @@ a {
 
 
 .photo-gallery {
-    padding: 16px;
+    padding: 1rem;
     background-color: 
     $secondary-color-alabaster;
     
@@ -207,12 +213,13 @@ a {
     }
 
     &__title {
-        padding-bottom: 16px;
+        color: $primary-color-black;
+        padding-bottom: 1rem;
     }
     
     &__image {
         width: 100%;
-        padding-bottom: 16px;
+        padding-bottom: 1rem;
         
         @include tablet {
             display: flex;
@@ -227,13 +234,13 @@ a {
 }
 .comment-new {
     display:flex;
-    border-bottom:1px solid;
+    border-bottom:.0625rem solid;
     &__avatar {
-        margin-top:20px;
+        margin-top:1.25rem;
         background-color:$secondary-color-mercury;
-        border-radius:100px;
-        width:48px;
-        height:48px
+        border-radius:6.25rem;
+        width:3rem;
+        height:3rem
         background-image url(../assets/images/Mohan-muruge.jpg);
         background-size:cover;
     }
@@ -245,8 +252,8 @@ a {
     }
 
     &__form-area {
-        border-radius:4px;
-        border:2px solid $secondary-color-mercury;
+        border-radius:.25rem;
+        border:.125rem solid $secondary-color-mercury;
         background-color: $secondary-color-alabaster;
         padding-top: 0 ;
         padding-bottom: 1rem;
@@ -255,13 +262,13 @@ a {
     }
 
     &__form-button {
-        border-radius:4px;
+        border-radius:.25rem;
         background-color: $primary-color-black ;
         color:$primary-color-white;
-        padding:16px 0;
+        padding:1rem 0;
         border:none;
         cursor: pointer;
-        margin-bottom:24px;
+        margin-bottom:1.5rem;
     }
 
     &__form-name {
@@ -343,7 +350,7 @@ a {
 
 .footer-carson {
 
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
         &__location {
             display: flex;
             flex-direction: column;
@@ -398,5 +405,5 @@ a {
     padding:1rem 0;
     border:none;
     cursor: pointer;
-    margin-bottom:24px;
+    margin-bottom:1.5rem;
 }
