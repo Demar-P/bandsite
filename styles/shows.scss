@@ -6,7 +6,7 @@
 
 * {
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
 
 
@@ -31,12 +31,12 @@ a {
         align-content: center;
         align-items: center;
         width: 100%;
-        
+
         &__img {
-            padding-bottom: .5rem; 
+            padding-bottom: .5rem;
             padding-top: 1rem;
         }
-        
+
         @include tablet {
             padding-left: 24px;
             flex-direction: row;
@@ -46,10 +46,10 @@ a {
     }
 
     &__img {
-        max-height: 20px;
-        max-width: 120px;
-        margin: 16px;
-        padding-bottom: 1rem;
+        max-height: 1.25rem;
+        max-width: 7.5rem;
+        margin: 1rem;
+        padding-bottom: 1.5rem;
     }
 }
 
@@ -73,7 +73,8 @@ a {
         color: $primary-color-white;
         text-align: center;
         padding-bottom: 1rem;
-        @include tablet{
+
+        @include tablet {
             width: 10%;
         }
     }
@@ -95,7 +96,7 @@ a {
 
 .hero {
     display: flex;
-    
+
     &__image {
         background-image: url('../assets/images/hero-shows.jpg');
         box-sizing: border-box;
@@ -107,16 +108,109 @@ a {
         height: 0;
         padding-bottom: 56.25%;
     }
+
     &__title {
         color: $primary-color-white;
         font-family: Avenir Next Regular;
         padding: 1rem;
     }
-    &__overlay {
-        
+
+    &__overlay {}
+}
+
+.shows {
+    margin-bottom: 2.5rem;
+
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 3rem;
+    }
+
+    &__labels-tablet {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            width: 4.6875rem;
+        }
+    }
+
+    &__title {
+        padding-bottom: 2.5rem;
+
+        @include desktop {
+            padding-top: 0;
+        }
+    }
+
+    &__list {
+        margin-bottom: 1.5rem;
+
+        @include desktop {
+            width: 4.9375rem;
+        }
+    }
+
+    &__concert {
+        border-bottom: 0.0625rem solid #e1e1e1;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__date {
+        font-weight: 600;
+        padding-bottom: 1.5rem;
+        margin-right: 0.6875rem;
+    }
+
+    &__venue {
+        padding-bottom: 1.5rem;
+    }
+
+    &__cta {
+        border-radius: 0.25rem;
+        background-color: #323232;
+        color: #ffffff;
+        padding: 1rem 0;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 1rem;
+        width: 18rem;
+        margin-top: 2rem;
+
+        @include tablet {
+            margin-bottom: 1.5rem;
+        }
+
+        @include tablet {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            width: 10rem;
+            align-self: flex-end;
+        }
+    }
+
+    &__cta:hover {
+        background-color: black;
     }
 }
 
+.button {
+    border-radius: 0.25rem;
+    background-color: $primary-color-black;
+    color: $primary-color-white;
+    padding: 1rem 0;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
 
 .footer {
     width: 100%;
@@ -128,28 +222,29 @@ a {
     padding-left: 1rem;
     padding-top: 1rem;
     @include font-footer-mobile;
-    
-        @include tablet {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-        }
+
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 
 
     &__social-media {
         padding-top: 1rem;
         padding-bottom: 1rem;
-        
+
 
         &--section {
             display: flex;
             flex-direction: column;
-            
+
         }
     }
+
     &__social-media-icons {
-        padding-right:2rem;
+        padding-right: 2rem;
     }
 
     &__title {
@@ -183,19 +278,20 @@ a {
 .footer-carson {
 
     padding-bottom: 16px;
-        &__location {
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 1rem;
-            
-        }
 
-        &__name-company {
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 1rem;
-            
-        }
+    &__location {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+
+    }
+
+    &__name-company {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+
+    }
 }
 
 .footer-pearl {
@@ -203,19 +299,20 @@ a {
     display: flex;
     flex-direction: column;
     padding-bottom: 1rem;
-        &__location {
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 1rem;
-        
-        }
 
-        &__name-company {
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 1rem;
-            
-        }
+    &__location {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+
+    }
+
+    &__name-company {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+
+    }
 }
 
 .social-media {
@@ -224,18 +321,20 @@ a {
     justify-content: space-between;
     padding-top: 1rem;
     padding-bottom: 1rem;
-        &__icons {
-            padding-top: 1rem;
-        
+
+    &__icons {
+        padding-top: 1rem;
+
     }
 }
 
-.button{
-    border-radius:.25rem;
+.button {
+    border-radius: .25rem;
     background-color: $primary-color-black ;
-    color:$primary-color-white;
-    padding:1rem 0;
-    border:none;
+    color: $primary-color-white;
+    padding: 2rem;
+    border: none;
     cursor: pointer;
-    margin-bottom:24px;
+    margin-bottom: 1.5rem;
+    width: 9.375rem;
 }

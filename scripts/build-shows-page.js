@@ -43,9 +43,16 @@ function createConcertElement(concert) {
     locationElement.classList.add("shows__location");
     locationElement.textContent = concert.location;
 
+    const button = document.createElement("button");
+    button.innerText = "BUY TICKETS";
+    button.classList.add("button");
+
+
+
     concertElement.appendChild(dateElement);
     concertElement.appendChild(venueElement);
     concertElement.appendChild(locationElement);
+    concertElement.appendChild(button);
 
     return concertElement;
 }
