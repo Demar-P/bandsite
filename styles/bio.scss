@@ -159,6 +159,14 @@ a {
         color: $primary-color-black;
         padding-left: 1rem;
         @include font-subheader-mobile;
+
+        @include tablet {
+        
+            @include font-page-header-desktop;
+            padding-top: 48px;
+            padding-bottom: 36px;
+
+        }
     
     }
 }
@@ -234,15 +242,23 @@ a {
 }
 .comment-new {
     display:flex;
-    border-bottom:.0625rem solid;
+    border-bottom:.0625rem solid $secondary-color-mercury;
+
+    @include tablet{
+        display: flex;
+        border-bottom: 0.0625rem solid;
+        flex-direction: row;
+        justify-content: center;
+    }
+
     &__avatar {
         margin-top:1.25rem;
         background-color:$secondary-color-mercury;
         border-radius:6.25rem;
         width:3rem;
         height:3rem
-        background-image url(../assets/images/Mohan-muruge.jpg);
-        background-size:cover;
+        // background-image url(../assets/images/Mohan-muruge.jpg);
+        // background-size:cover;
     }
 
     &__form {
@@ -252,6 +268,9 @@ a {
     }
 
     &__form-area {
+        padding: 0.75rem;
+        width: 100%;
+        font-family: avenir-regular;
         border-radius:.25rem;
         border:.125rem solid $secondary-color-mercury;
         background-color: $secondary-color-alabaster;
@@ -262,27 +281,111 @@ a {
     }
 
     &__form-button {
+        
         border-radius:.25rem;
         background-color: $primary-color-black ;
         color:$primary-color-white;
-        padding:1rem 0;
+        padding:1rem;
         border:none;
         cursor: pointer;
         margin-bottom:1.5rem;
+
+        @include tablet{
+            width: 9.375rem;
+        }
+
+        @include desktop{
+            width: 9.375rem; 
+        }
     }
 
     &__form-name {
-
+        padding: .75rem;
+        border-radius: .25rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-family: avenir-regular;
+        border:.125rem solid $secondary-color-mercury;
+        background-color: $secondary-color-alabaster;
     }
 
     &__label {}
 }
 
 .comment {
-    &__form-section {}
+    &__avatar {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        margin-top: 1.4rem;
+        background-color:$secondary-color-mercury;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-    &__title {
+    &__image {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 2rem;
+        margin-top: 1.4rem;
+    }
+
+    &__content {
+        border-bottom: .0625rem solid $secondary-color-mercury;
+        
+        
     
+    }
+
+    &__date {
+        @include tablet{
+            @include font-body-mobile;
+
+        }
+        @include desktop{
+            @include font-body-desktop;
+
+        }
+    }
+
+    &__name {
+        @include tablet{
+            @include font-body-mobile;
+
+        }
+        @include desktop{
+            @include font-body-desktop;
+
+        }
+    }
+
+    &__text {
+        @include tablet{
+            @include font-body-mobile;
+
+        }
+        @include desktop{
+            @include font-body-desktop;
+
+        }
+
+    }
+
+    &--newest {
+
+        @include tablet{
+            @include font-body-mobile;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            padding-left: 1.125rem;
+            padding-right: 1.125rem;
+        }
+        @include desktop{
+            @include font-body-desktop;
+
+        }
     }
 }
 
@@ -398,12 +501,12 @@ a {
     }
 }
 
-.button{
-    border-radius:.25rem;
-    background-color: $primary-color-black ;
-    color:$primary-color-white;
-    padding:1rem 0;
-    border:none;
-    cursor: pointer;
-    margin-bottom:1.5rem;
-}
+// .button{
+//     border-radius:.25rem;
+//     background-color: $primary-color-black ;
+//     color:$primary-color-white;
+//     padding:1rem 0;
+//     border:none;
+//     cursor: pointer;
+//     margin-bottom:1.5rem;
+// }
