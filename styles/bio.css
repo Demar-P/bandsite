@@ -76,6 +76,11 @@ a {
   line-height: 1.375rem;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  .nav__menu {
+    width: 40%;
+  }
+}
 .nav__menu-item {
   width: 50%;
   color: #E1E1E1;
@@ -84,7 +89,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .nav__menu-item {
-    width: 10%;
+    width: 20%;
   }
 }
 .nav__menu-item--underline {

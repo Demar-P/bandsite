@@ -66,6 +66,9 @@ a {
         width: 100%;
         justify-content: space-evenly;
         @include font-subheader-mobile;
+        @include tablet{
+            width: 40%;
+        }
     }
 
     &__menu-item {
@@ -73,8 +76,14 @@ a {
         color: $secondary-color-mercury;
         text-align: center;
         padding-bottom: 1rem;
-        @include tablet{
-            width: 10%;
+        
+
+
+
+
+
+        @include tablet {
+            width: 20%;
         }
     }
 

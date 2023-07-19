@@ -86,12 +86,12 @@ a {
     }
 }
 
-.section {
-    &__title {}
-}
+
+
+
 
 .shows {
-    &__list {}
+
 
     &__table {
         margin: 1rem;
@@ -123,7 +123,7 @@ a {
         padding: 1rem;
     }
 
-    &__overlay {}
+
 }
 
 .shows {
@@ -167,6 +167,7 @@ a {
         margin-bottom: 1rem;
 
         @include tablet {
+
             padding-top: 1.5rem;
             padding-bottom: 1.5rem;
             padding-left: 1.125rem;
@@ -178,13 +179,25 @@ a {
     }
 
     &__date {
+        @include font-body-mobile;
         font-weight: 600;
         padding-bottom: 1.5rem;
         margin-right: 0.6875rem;
+        @include tablet{
+            @include font-body-desktop;
+        }
     }
 
     &__venue {
         padding-bottom: 1.5rem;
+        @include font-body-mobile;
+        font-weight: 600;
+        padding-bottom: 1.5rem;
+        margin-right: 0.6875rem;
+        @include tablet{
+            @include font-body-desktop;
+        }
+    }
     }
 
     &__cta {
@@ -213,7 +226,8 @@ a {
     &__cta:hover {
         background-color: black;
     }
-}
+
+
 
 
 
@@ -229,6 +243,7 @@ a {
     @include font-footer-mobile;
 
     @include tablet {
+        @include font-footer-desktop;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
