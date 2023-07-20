@@ -16,6 +16,8 @@ let comments = [
     },
 ]
 
+axois
+
 const commentContainer = document.querySelector('.comment-container');
 const commentForm = document.querySelector('.comment-new__form');
 
