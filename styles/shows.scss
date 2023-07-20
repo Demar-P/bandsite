@@ -357,10 +357,17 @@ a {
     cursor: pointer;
     margin-bottom: 1.5rem;
     width: 100%;
-   
+
+
+
     @include tablet{
         width: 9.375rem;
         padding-left: 2rem;
         padding-right: 2rem;
     }
+    
+
+        
+    
+
 }
