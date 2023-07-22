@@ -29,6 +29,7 @@ function createCommentElement(comment) {
     console.log(currentDate);
     let formattedDate = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
     dateElement.textContent = formattedDate;
+    
 
     const nameDateWrapper = document.createElement('div');
     nameDateWrapper.classList.add('comment__name-date-wrapper');

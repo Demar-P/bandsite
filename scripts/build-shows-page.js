@@ -10,13 +10,15 @@ function createConcertElement(concert) {
     dateElement.classList.add("shows__date");
     dateElement.textContent = concert.date;
     
-     
+
     const concertDate = new Date(concert.date);
     const daysWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    console.log('this should be the day' ,concertDate.getDay());
-    const formattedDate = `${daysWeek[concertDate.getDay()]}/${concertDate.getMonth() + 1}/${concertDate.getFullYear()}`;
-    console.log('This should be the date' ,formattedDate);
-    console.log('this should be the day' ,concertDate.getDay());
+    const monthsOfYear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+    const formattedDate = `${daysWeek[concertDate.getDay()]} ${monthsOfYear[concertDate.getMonth()] } ${concertDate.getFullYear()}`;
+    
+    
+    
     dateElement.textContent = formattedDate;
 
     
@@ -55,13 +57,8 @@ function renderShows() {
 
 axios.get('https://project-1-api.herokuapp.com/showdates?api_key=e5c0f0c1-2a94-4c3f-8166-06280b36bfb6')
     .then(results => {
-    console.log ("this is the data from axios" ,results.data);
     shows = results.data
-    console.log('api is getting show info', shows)
-    
-    // console.log("this is comments after the request",comments)
     renderShows() 
-
 })
 
 renderShows();
