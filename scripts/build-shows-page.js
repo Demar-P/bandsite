@@ -1,31 +1,6 @@
 const showsTable = document.querySelector('.shows__table');
 
-const shows = [
-    {   date:'Mon Sept 06 2021', 
-        venue:'Ronald Lane', 
-        location: 'San Francisco, CA'
-    },
-    {   date:'Tue Sept 21 2021', 
-        venue:'Pier 3 East', 
-        location: 'San Francisco, CA'
-    },
-    {   date:'Fri Oct 15 2021',
-        venue:'View Lounge', 
-        location: 'San Francisco, CA'
-    },
-    {   date:'Sat Nov 06 2021',
-        venue:'Hyatt Agency', 
-        location: 'San Francisco, CA'
-    },
-    {   date:'Fri Nov 26 2021', 
-        venue:'Moscow Center', 
-        location: 'San Francisco, CA'
-    },
-    {   date:'Wed Dec 15 2021',
-        venue:'Pres Club', 
-        location: 'San Francisco, CA'
-    }
-];
+let shows = [];
 
 function createConcertElement(concert) {
     const concertElement = document.createElement("div");
@@ -34,10 +9,21 @@ function createConcertElement(concert) {
     const dateElement = document.createElement("p");
     dateElement.classList.add("shows__date");
     dateElement.textContent = concert.date;
+    
+     
+    const concertDate = new Date(concert.date);
+    const daysWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    console.log('this should be the day' ,concertDate.getDay());
+    const formattedDate = `${daysWeek[concertDate.getDay()]}/${concertDate.getMonth() + 1}/${concertDate.getFullYear()}`;
+    console.log('This should be the date' ,formattedDate);
+    console.log('this should be the day' ,concertDate.getDay());
+    dateElement.textContent = formattedDate;
+
+    
 
     const venueElement = document.createElement("p");
     venueElement.classList.add("shows__venue");
-    venueElement.textContent = concert.venue;
+    venueElement.textContent = concert.place;
 
     const locationElement = document.createElement("p");
     locationElement.classList.add("shows__location");
@@ -65,5 +51,17 @@ function renderShows() {
         showsTable.appendChild(concertElement);
     }
 }
+
+
+axios.get('https://project-1-api.herokuapp.com/showdates?api_key=e5c0f0c1-2a94-4c3f-8166-06280b36bfb6')
+    .then(results => {
+    console.log ("this is the data from axios" ,results.data);
+    shows = results.data
+    console.log('api is getting show info', shows)
+    
+    // console.log("this is comments after the request",comments)
+    renderShows() 
+
+})
 
 renderShows();

@@ -1,27 +1,6 @@
-let comments = [
-    // {
-    //     name: "Connor Walton",
-    //     comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-    //     date: "02/17/2021",
-    // },
-    // {
-    //     name: "Emilie Beach",
-    //     comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-    //     date: "01/09/2021",
-    // },
-    // {
-    //     name: "Miles Acosta",
-    //     comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-    //     date: "12/20/2020",
-    // },
-]
+let comments = []
 //creating axios get to update array 
 
-axios.get('https://project-1-api.herokuapp.com/comments?api_key=e5c0f0c1-2a94-4c3f-8166-06280b36bfb6')
-    .then(results => {
-    console.log (results.data);
-    results = comments
-})
 
 const commentContainer = document.querySelector('.comment-container');
 const commentForm = document.querySelector('.comment-new__form');
@@ -43,12 +22,25 @@ function createCommentElement(comment) {
 
     const dateElement = document.createElement('p');
     dateElement.classList.add('comment__date');
-    dateElement.textContent = comment.date;
+    let date = new Date(comment.timestamp)
+    dateElement.textContent = date;
+    
+    let currentDate = new Date(comment.timestamp);
+    console.log(currentDate);
+    let formattedDate = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
+    dateElement.textContent = formattedDate;
+
+    const nameDateWrapper = document.createElement('div');
+    nameDateWrapper.classList.add('comment__name-date-wrapper');
+    nameDateWrapper.appendChild(nameElement);
+    nameDateWrapper.appendChild(dateElement);
 
     const textElement = document.createElement('p');
     textElement.classList.add('comment__text');
     textElement.textContent = comment.comment;
 
+
+    
     contentElement.appendChild(nameElement);
     contentElement.appendChild(dateElement);
     contentElement.appendChild(textElement);
@@ -64,7 +56,9 @@ function displayComment() {
 
     
     const reversedComments = comments.slice().reverse();
-
+    
+    
+    // console.log("this is the reversed arr",reversedComments)
     for (const comment of reversedComments) {
         const commentElement = createCommentElement(comment);
         commentContainer.appendChild(commentElement);
@@ -76,20 +70,29 @@ function displayComment() {
 
 commentForm.addEventListener('submit', (event) => {
     event.preventDefault();
-
+    console.log("submit button was clicked")
     
     const name = commentForm.name.value;
     const comment = commentForm.comment.value;
     const currentDate = new Date();
     const formattedDate = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
 
+
     
     const newComment = {
         name: name,
         comment: comment,
-        date: formattedDate
     };
+    console.log("this is the new comment" ,newComment)
 
+
+    axios.post('https://project-1-api.herokuapp.com/comments?api_key=e5c0f0c1-2a94-4c3f-8166-06280b36bfb6', newComment)
+        .then(results => {
+        console.log("this is the rsult from post:",results.data);
+        // comments = results.data
+        // console.log(comments)    
+        displayComment();
+        })    
     
     comments.unshift(newComment);
 
@@ -103,5 +106,15 @@ commentForm.addEventListener('submit', (event) => {
 
 
 displayComment();
+
+
+axios.get('https://project-1-api.herokuapp.com/comments?api_key=e5c0f0c1-2a94-4c3f-8166-06280b36bfb6')
+    .then(results => {
+    // console.log ("this is the data from axios" ,results.data);
+    comments = results.data
+    
+    // console.log("this is comments after the request",comments)
+    displayComment()
+})
 
 
