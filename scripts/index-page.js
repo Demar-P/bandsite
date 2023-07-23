@@ -26,15 +26,15 @@ function createCommentElement(comment) {
     dateElement.textContent = date;
     
     let currentDate = new Date(comment.timestamp);
-    console.log(currentDate);
+    // console.log(currentDate);
     let formattedDate = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
     dateElement.textContent = formattedDate;
     
 
-    const nameDateWrapper = document.createElement('div');
-    nameDateWrapper.classList.add('comment__name-date-wrapper');
-    nameDateWrapper.appendChild(nameElement);
-    nameDateWrapper.appendChild(dateElement);
+    // const nameDateWrapper = document.createElement('div');
+    // nameDateWrapper.classList.add('comment__name-date-wrapper');
+    // nameDateWrapper.appendChild(nameElement);
+    // nameDateWrapper.appendChild(dateElement);
 
     const textElement = document.createElement('p');
     textElement.classList.add('comment__text');
@@ -55,19 +55,28 @@ function createCommentElement(comment) {
 function displayComment() {
     commentContainer.innerHTML = '';
 
+    // const reversedComments = comments.slice();
     
-    const reversedComments = comments.slice().reverse();
-    
-    
-    // console.log("this is the reversed arr",reversedComments)
-    for (const comment of reversedComments) {
+    for (const comment of comments) {
         const commentElement = createCommentElement(comment);
         commentContainer.appendChild(commentElement);
     }
 }
 
+    // const reversedComments = comments.slice().reverse();
+    
+    
+    // console.log("this is the reversed arr",reversedComments)
 
-//posting comment data to api
+function displayNewComment(comment) {
+    const commentElement = createCommentElement(comment);
+    commentContainer.prepend(commentElement); // This will add the new comment at the top
+}
+    
+console.log('this is trying to reverse the order',displayComment())
+
+
+
 
 commentForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -82,37 +91,31 @@ commentForm.addEventListener('submit', (event) => {
     
     const newComment = {
         name: name,
-        comment: comment,
+        comment:comment,   
     };
     console.log("this is the new comment" ,newComment)
 
-
+    //posting comment data to api
     axios.post('https://project-1-api.herokuapp.com/comments?api_key=e5c0f0c1-2a94-4c3f-8166-06280b36bfb6', newComment)
         .then(results => {
-        console.log("this is the rsult from post:",results.data);
-        // comments = results.data
-        // console.log(comments)    
-        displayComment();
-        })    
+        console.log("this is the result from post:",results.data);
+        // comments.unshift(results.data)
+        commentForm.name.value = '';
+        commentForm.comment.value = '';
+        displayNewComment(results.data);
+        // console.log('this is after posting to api',displayComment())
     
-    comments.unshift(newComment);
-
-    
-    commentForm.name.value = '';
-    commentForm.comment.value = '';
-
-
-    displayComment()
+        })       
 });
 
 
-displayComment();
+
 
 
 axios.get('https://project-1-api.herokuapp.com/comments?api_key=e5c0f0c1-2a94-4c3f-8166-06280b36bfb6')
     .then(results => {
-    // console.log ("this is the data from axios" ,results.data);
-    comments = results.data
+    console.log ("this is the data from axios" ,results.data);
+    comments = results.data.reverse();
     
     // console.log("this is comments after the request",comments)
     displayComment()

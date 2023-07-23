@@ -13,9 +13,9 @@ function createConcertElement(concert) {
 
     const concertDate = new Date(concert.date);
     const daysWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const monthsOfYear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const monthsOfYear = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
-    const formattedDate = `${daysWeek[concertDate.getDay()]} ${monthsOfYear[concertDate.getMonth()] } ${concertDate.getFullYear()}`;
+    const formattedDate = `${daysWeek[concertDate.getDay()]} ${monthsOfYear[concertDate.getMonth()]} ${[concertDate.getDate()]} ${concertDate.getFullYear()}`;
     
     
     
