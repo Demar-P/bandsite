@@ -58,6 +58,11 @@ a {
     list-style: none;
     padding: 0;
     width: 100%;
+    @include tablet{
+        height: 14vh;
+        align-items: flex-end;
+    }
+
 
     &__menu {
         list-style: none;
@@ -83,6 +88,7 @@ a {
 
 
         @include tablet {
+            align-items: center;
             width: 20%;
         }
     }
@@ -170,10 +176,10 @@ a {
         @include font-subheader-mobile;
 
         @include tablet {
-        
+            align-content: center;
+            margin: 8rem auto 0rem 1.6rem;
             @include font-page-header-desktop;
-            padding-top: 48px   ;
-            padding-bottom: 2.25rem;
+            
 
         }
     
@@ -183,17 +189,33 @@ a {
 
 
 .intro {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    @include tablet {
+        margin: 36px;
+    }
     
+    &__text1{
+        @include mobile{
+            // @include font-section-header-desktop;
+        }
+        @include tablet {
+            @include font-subheader-desktop;
+        }
+        }
+    }
 
     &__text {
         color: $primary-color-black;
         padding-bottom: 16px;
         @include font-subheader-mobile;
+        color: $primary-color-black;
+        
+        
 
         @include tablet {
-            @include font-subheader-desktop;
+            @include font-section-header-desktop;
+            margin: 1.6rem auto auto auto;
         }   
     }
 
@@ -203,6 +225,7 @@ a {
     }
 
     &__title {
+        margin: 1.6rem auto auto auto;
         color: $primary-color-black;
         margin-bottom: 16px;
         padding-top: 24px;
@@ -210,9 +233,57 @@ a {
 
         @include tablet {
             @include font-section-header-desktop;
+            margin: 1.6rem 0rem;
         }   
     }
+
+
+.bio-section {
+
+    &__paragraph {
+        @include font-body-mobile;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    
+        @include tablet{
+            @include font-body-desktop;
+            flex-direction: row;
+            padding: 0rem 1.5rem 0rem 0rem;
 }
+    
+        &--text {
+            @include font-body-mobile;
+            color: $primary-color-black;
+            padding-bottom: 16px;
+            padding-right: 24px;
+            padding-left: 24px;
+            
+            @include tablet{
+                @include font-body-desktop;
+                }
+        
+    }
+
+    &__title {
+        color: $primary-color-black;
+        padding-left: 1rem;
+        @include font-subheader-mobile;
+
+        @include tablet {
+            margin: 36px;
+            @include font-subheader-desktop;
+            // padding-top: 3rem;
+            // padding-bottom: 2.25rem;
+        }
+
+
+    }
+}
+
+
+
 
 
 .photo-gallery {
@@ -232,6 +303,10 @@ a {
     &__title {
         color: $primary-color-black;
         padding-bottom: 16px;
+        @include font-body-mobile;
+        @include tablet{
+            @include font-body-desktop;
+        }
     }
     
     &__image {
@@ -318,7 +393,9 @@ a {
         background-color: $secondary-color-alabaster;
     }
 
-    &__label {}
+    // &__label {
+
+    // }
 }
 
 .comment {
