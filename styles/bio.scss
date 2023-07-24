@@ -32,10 +32,10 @@ a {
         align-items: center;
         width: 100%;
         
-        &__img {
-            padding-bottom: 8px; 
-            padding-top: 16px;
-        }
+        // &__img {
+        //     padding-bottom: 8px; 
+        //     padding-top: 16px;
+        // }
         
         @include tablet {
             padding-left: 24px;
@@ -59,7 +59,7 @@ a {
     padding: 0;
     width: 100%;
     @include tablet{
-        height: 14vh;
+        height: 11vh;
         align-items: flex-end;
     }
 
@@ -80,7 +80,7 @@ a {
         width: 50%;
         color: $secondary-color-mercury;
         text-align: center;
-        padding-bottom: 16px;
+        padding-bottom: 1rem;
         
 
 
@@ -89,7 +89,7 @@ a {
 
         @include tablet {
             align-items: center;
-            width: 20%;
+            width: 25%;
         }
     }
 
@@ -133,7 +133,7 @@ a {
     &__title {
         color: $primary-color-white;
         font-family: Avenir Next Regular;
-        padding: 16px;
+        padding: 1rem;
     }
 }
 
@@ -149,24 +149,24 @@ a {
         flex-direction: column;
         
         @include font-body-mobile;
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         
         @include tablet{
             display: flex;
             flex-direction: row;
             @include font-body-desktop;
-            padding-left: 24px;
-            padding-right: 24px;
+            padding-left: 1.5rem;
+            padding-right: 1.ß5rem;
         }
 
 
 
         &--text {
             color: $primary-color-black;
-            padding-bottom: 16px;
-            padding-right: 24px;
-            padding-left: 24px;
+            padding-bottom: 1rem;
+            padding-right: 1.5rem;
+            padding-left: 1.ß5rem;
         }
     }
 
@@ -207,7 +207,7 @@ a {
 
     &__text {
         color: $primary-color-black;
-        padding-bottom: 16px;
+        padding-bottom: 1rem;
         @include font-subheader-mobile;
         color: $primary-color-black;
         
@@ -227,8 +227,8 @@ a {
     &__title {
         margin: 1.6rem auto auto auto;
         color: $primary-color-black;
-        margin-bottom: 16px;
-        padding-top: 24px;
+        margin-bottom: 1rem;
+        padding-top: 1.5rem;
         @include font-section-header-mobile;
 
         @include tablet {
@@ -256,9 +256,9 @@ a {
         &--text {
             @include font-body-mobile;
             color: $primary-color-black;
-            padding-bottom: 16px;
-            padding-right: 24px;
-            padding-left: 24px;
+            padding-bottom: 1rem;
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;
             
             @include tablet{
                 @include font-body-desktop;
@@ -287,7 +287,7 @@ a {
 
 
 .photo-gallery {
-    padding: 16px;
+    padding: 1rem;
     background-color: 
     $secondary-color-alabaster;
     
@@ -302,7 +302,7 @@ a {
 
     &__title {
         color: $primary-color-black;
-        padding-bottom: 16px;
+        padding-bottom: 1rem;
         @include font-body-mobile;
         @include tablet{
             @include font-body-desktop;
@@ -311,7 +311,7 @@ a {
     
     &__image {
         width: 100%;
-        padding-bottom: 16px;
+        padding-bottom: 1rem;
         
         @include tablet {
             display: flex;
@@ -351,15 +351,15 @@ a {
     }
 
     &__form-area {
-        padding: 12px;
+        padding: .75rem;
         width: 100%;
         font-family: avenir-regular;
         border-radius:4px;
         border:2px solid $secondary-color-mercury;
         background-color: $secondary-color-alabaster;
         padding-top: 0 ;
-        padding-bottom: 16px;
-        margin-bottom: 16px;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
 
     }
 
@@ -368,10 +368,10 @@ a {
         border-radius:4px;
         background-color: $primary-color-black ;
         color:$primary-color-white;
-        padding:16px;
+        padding:1rem;
         border:none;
         cursor: pointer;
-        margin-bottom:24px;
+        margin-bottom:1.5rem;
 
         @include tablet{
             width: 150px;
@@ -383,7 +383,7 @@ a {
     }
 
     &__form-name {
-        padding: 12px;
+        padding: .75rem;
         border-radius: 4px;
         width: 100%;
         display: flex;
@@ -462,10 +462,10 @@ a {
 
         @include tablet{
             @include font-body-mobile;
-            padding-top: 24px;
-            padding-bottom: 24px;
-            padding-left: 18px;
-            padding-right: 18px;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            padding-left: 1.125rem;
+            padding-right: 1.125rem;
         }
         @include desktop{
             @include font-body-desktop;
@@ -481,8 +481,8 @@ a {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding-left: 16px;
-    padding-top: 16px;
+    padding-left: 1rem;
+    padding-top: 1rem;
     @include font-footer-mobile;
     
         @include tablet {
@@ -494,8 +494,8 @@ a {
 
 
     &__social-media {
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         
 
         &--section {
@@ -511,45 +511,45 @@ a {
     &__title {
         display: flex;
         flex-direction: column;
-        padding-bottom: 16px;
-        padding-top: 16px;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
         @include font-footer-mobile;
     }
 }
 
 .footer-cam {
 
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
 
     &__location {
         display: flex;
         flex-direction: column;
-        padding-bottom: 16px;
-        padding-top: 16px;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
     }
 
     &__name-company {
         display: flex;
         flex-direction: column;
-        padding-bottom: 16px;
-        padding-top: 16px;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
     }
 }
 
 .footer-carson {
 
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
         &__location {
             display: flex;
             flex-direction: column;
-            padding-bottom: 16px;
+            padding-bottom: 1rem;
             
         }
 
         &__name-company {
             display: flex;
             flex-direction: column;
-            padding-bottom: 16px;
+            padding-bottom: 1rem;
             
         }
 }
@@ -558,18 +558,18 @@ a {
 
     display: flex;
     flex-direction: column;
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
         &__location {
             display: flex;
             flex-direction: column;
-            padding-bottom: 16px;
+            padding-bottom: 1rem;
         
         }
 
         &__name-company {
             display: flex;
             flex-direction: column;
-            padding-bottom: 16px;
+            padding-bottom: 1rem;
             
         }
 }
@@ -578,10 +578,10 @@ a {
     display: flex;
     width: 40%;
     justify-content: space-between;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
         &__icons {
-            padding-top: 16px;
+            padding-top: 1rem;
         
     }
 }
