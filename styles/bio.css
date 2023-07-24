@@ -196,21 +196,38 @@ a {
     font-weight: 600;
   }
 }
-.intro__text {
+@media screen and (min-width: 1024px) {
+  .intro__text {
+    margin: 2.25rem;
+    font-family: "Avenir Next";
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+}
+.intro__text1 {
   color: #323232;
   padding-bottom: 1rem;
-  font-family: "Avenir Next";
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 600;
+  font-family: "Avenir Next Bold";
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
-  .intro__text {
+  .intro__text1 {
     font-family: "Avenir Next Bold";
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-weight: 700;
     margin: 1.6rem auto auto auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .intro__text1 {
+    font-family: "Avenir Next Bold";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
   }
 }
 .intro__photo {

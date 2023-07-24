@@ -33,7 +33,7 @@ a {
         width: 100%;
         
         @include tablet {
-            padding-left: 24px;
+            padding-left: 1.5rem;
             flex-direction: row;
             justify-content: space-evenly;
             align-content: space-evenly;
@@ -43,8 +43,8 @@ a {
     &__img {
         max-height: 20px;
         max-width: 120px;
-        margin: 16px;
-        padding-bottom: 16px;
+        margin: 1rem;
+        padding-bottom: 1rem;
     }
 }
 
@@ -164,7 +164,7 @@ a {
     }
 
     &__concert {
-        padding: 16px;
+        padding: 1rem;
         border-bottom: 0.0625rem solid #e1e1e1;
         margin-bottom: 1rem;
 
@@ -233,122 +233,149 @@ a {
 
 
 
-.footer {
-    width: 100%;
-    background-color: $primary-color-black;
-    color: $primary-color-white;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    padding-left: 1rem;
-    padding-top: 1rem;
-    @include font-footer-mobile;
-
-    @include tablet {
-        @include font-footer-desktop;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-
-    &__social-media {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-
-
-        &--section {
-            display: flex;
-            flex-direction: column;
-
-        }
-    }
-
-    &__social-media-icons {
-        padding-right: 2rem;
-    }
-
-    &__title {
+    .footer {
+        width: 100%;
+        background-color: $primary-color-black;
+        color: $primary-color-white;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        padding-bottom: 1rem;
+        padding-left: 1rem;
         padding-top: 1rem;
         @include font-footer-mobile;
+    
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+    
+        &__social-media {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+    
+    
+            &--section {
+                display: flex;
+                flex-direction: column;
+                @include tablet{
+    
+                }
+                @include desktop{
+                    display: flex;
+                    flex-direction: row;    
+                }
+            }
+        }
+    
+        &__social-media-icons 
+            {
+            padding-right: 2rem;
+            }
+            @include tablet{
+    
+            }
+            @include desktop{
+                display: flex;
+                flex-direction: row;    
+            }
+    
+        &__title 
+            {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            @include font-footer-mobile;
+            }
+            @include tablet{
+    
+            }
+            @include desktop{
+                display: flex;
+                flex-direction: row;    
+            }
     }
-}
-
-.footer-cam {
-
-    padding-bottom: 1rem;
-
-    &__location {
+    
+    .footer-cam {
+    
+        padding-bottom: 1rem;
+    
+        &__location 
+            {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            }
+    
+        &__name-company 
+            {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            }
+    }
+    
+    .footer-carson {
+    
+        padding-bottom: 1rem;
+            &__location {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 1rem;
+                
+            }
+    
+            &__name-company {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 1rem;
+                
+            }
+    }
+    
+    .footer-pearl {
+    
         display: flex;
         flex-direction: column;
         padding-bottom: 1rem;
+            &__location {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 1rem;
+            
+            }
+    
+            &__name-company {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 1rem;
+                
+            }
+    }
+    
+    .social-media {
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
         padding-top: 1rem;
-    }
-
-    &__name-company {
-        display: flex;
-        flex-direction: column;
         padding-bottom: 1rem;
-        padding-top: 1rem;
-    }
-}
-
-.footer-carson {
-
-    padding-bottom: 1rem;
-
-    &__location {
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 1rem;
-
-    }
-
-    &__name-company {
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 1rem;
-
-    }
-}
-
-.footer-pearl {
-
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 1rem;
-
-    &__location {
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 1rem;
-
-    }
-
-    &__name-company {
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 1rem;
-
-    }
-}
-
-.social-media {
-    display: flex;
-    width: 40%;
-    justify-content: space-between;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-
-    &__icons {
-        padding-top: 1rem;
-
-    }
-}
+            &__icons {
+                padding-top: 1rem;
+            
+            }
+    
+        }
 
 .button {
     border-radius: .25rem;

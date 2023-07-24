@@ -178,19 +178,26 @@ a {
         @include tablet {
             @include font-subheader-desktop;
         }
+        @include desktop{
+            margin: 2.25rem;
+            @include font-subheader-desktop;
+        }
         }
     
 
-    &__text{
+    &__text1{
         color: $primary-color-black;
         padding-bottom: 1rem;
-        @include font-subheader-mobile;
+        @include font-section-header-desktop;
         
 
         @include tablet {
             @include font-section-header-desktop;
             margin: 1.6rem auto auto auto;
-        }   
+        } 
+        @include desktop{
+            @include font-section-header-desktop;
+        }
     }
 
     &__photo {
