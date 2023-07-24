@@ -77,17 +77,11 @@ a {
         text-align: center;
         padding-bottom: 1rem;
         
-
-
-
-
-
         @include tablet {
             align-items: center;
             width: 25%;
         }
     }
-
     &__menu-item--underline {
         border-bottom: solid;
         color: $primary-color-white;
@@ -96,24 +90,18 @@ a {
 
 
 
-// .hero__overlay {
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     background-color: #323232(0,0,0,0.5);
-// }
+.hero__overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #323232(0,0,0,0.5);
+}
 
-// .hero__overlay{
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     background-color: #323232(0,0,0,0.5);
-// }
+
 .hero {
     display: flex;
-    
+
     &__image {
         background-image: url('../assets/images/hero-bio.jpg');
         box-sizing: border-box;
@@ -138,7 +126,6 @@ a {
     margin-right: 16px;
     
     
-
     &__paragraph {
         display: flex;
         flex-direction: column;
@@ -155,15 +142,13 @@ a {
             padding-right: 1.5rem;
         }
 
-
-
         &--text {
             color: $primary-color-black;
             padding-bottom: 1rem;
             padding-right: 1.5rem;
             padding-left: 1.5rem;
-        }
-    }
+            }
+    
 
     &__title {
         color: $primary-color-black;
@@ -174,12 +159,11 @@ a {
             align-content: center;
             margin: 8rem auto 0rem 1.6rem;
             @include font-body-desktop;          
-        }
+            }
     
+        }
     }
 }
-
-
 
 .intro {
     margin-left: 1rem;
@@ -188,7 +172,7 @@ a {
         margin: 36px;
     }
     
-    &__text1{
+    &__text{
 
         @include tablet {
             @include font-subheader-desktop;
@@ -225,42 +209,47 @@ a {
             margin: 1.6rem 0rem;
         }   
     }
-
+}
 
 .bio-section {
 
-    &__paragraph {
-        @include font-body-mobile;
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        margin: auto;
+    &__paragraph 
+        {
+            @include font-body-mobile;
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin: auto;
     
-        @include tablet{
+            @include tablet
+                {
             @include font-body-desktop;
             flex-direction: row;
             padding: 0rem 1.5rem 0rem 0rem;
-}
+                }
     
-        &--text {
-            @include font-body-mobile;
-            color: $primary-color-black;
-            padding-bottom: 1rem;
-            padding-right: 1.5rem;
-            padding-left: 1.5rem;
+    &--text 
+                {
+                @include font-body-mobile;
+                color: $primary-color-black;
+                padding-bottom: 1rem;
+                padding-right: 1.5rem;
+                padding-left: 1.5rem;
             
-            @include tablet{
-                @include font-body-desktop;
+            @include tablet
+                {
+                    @include font-body-desktop;
                 }
         
-    }
+            }
 
-    &__title {
-        color: $primary-color-black;
-        padding-left: 1rem;
-        @include font-subheader-mobile;
+    &__title 
+            {
+            color: $primary-color-black;
+            padding-left: 1rem;
+            @include font-subheader-mobile;
 
-        @include tablet {
+            @include tablet {
             margin: 36px;
             @include font-subheader-desktop;
 
@@ -268,6 +257,7 @@ a {
 
 
     }
+}
 }
 
 .photo-gallery {
@@ -580,5 +570,5 @@ a {
             padding-top: 1rem;
         
         }
-}
 
+    }
