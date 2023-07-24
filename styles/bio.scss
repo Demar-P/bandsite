@@ -12,7 +12,7 @@
 
 .photo {
     width: 100%;
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
 }
 
 a {
@@ -32,13 +32,8 @@ a {
         align-items: center;
         width: 100%;
         
-        &__img {
-            padding-bottom: 8px; 
-            padding-top: 16px;
-        }
-        
         @include tablet {
-            padding-left: 24px;
+            padding-left: 1.5rem;
             flex-direction: row;
             justify-content: space-evenly;
             align-content: space-evenly;
@@ -46,10 +41,10 @@ a {
     }
 
     &__img {
-        max-height: 20px;
-        max-width: 120px;
-        margin: 16px;
-        padding-bottom: 16px;
+        max-height: 1.25rem;
+        max-width: 7.5rem;
+        margin: 1rem;
+        padding-bottom: 1rem;
     }
 }
 
@@ -58,6 +53,11 @@ a {
     list-style: none;
     padding: 0;
     width: 100%;
+    @include tablet{
+        height: 11vh;
+        align-items: flex-end;
+    }
+
 
     &__menu {
         list-style: none;
@@ -75,18 +75,13 @@ a {
         width: 50%;
         color: $secondary-color-mercury;
         text-align: center;
-        padding-bottom: 16px;
+        padding-bottom: 1rem;
         
-
-
-
-
-
         @include tablet {
-            width: 20%;
+            align-items: center;
+            width: 25%;
         }
     }
-
     &__menu-item--underline {
         border-bottom: solid;
         color: $primary-color-white;
@@ -103,16 +98,10 @@ a {
     background-color: #323232(0,0,0,0.5);
 }
 
-.hero__overlay{
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #323232(0,0,0,0.5);
-}
+
 .hero {
     display: flex;
-    
+
     &__image {
         background-image: url('../assets/images/hero-bio.jpg');
         box-sizing: border-box;
@@ -126,43 +115,47 @@ a {
     }
     &__title {
         color: $primary-color-white;
-        font-family: Avenir Next Regular;
-        padding: 16px;
-    }
+        @include font-page-header-mobile;
+        padding: 1rem;
+        }
+        @include tablet{
+            @include font-page-header-desktop;
+        }
+        @include desktop{
+            @include font-section-header-desktop
+        }
+
 }
 
 
 .bio-section {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 1rem;
+    margin-right: 1rem;
     
     
-
     &__paragraph {
         display: flex;
         flex-direction: column;
         
         @include font-body-mobile;
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         
         @include tablet{
             display: flex;
             flex-direction: row;
             @include font-body-desktop;
-            padding-left: 24px;
-            padding-right: 24px;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
         }
-
-
 
         &--text {
             color: $primary-color-black;
-            padding-bottom: 16px;
-            padding-right: 24px;
-            padding-left: 24px;
-        }
-    }
+            padding-bottom: 1rem;
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;
+            }
+    
 
     &__title {
         color: $primary-color-black;
@@ -170,55 +163,135 @@ a {
         @include font-subheader-mobile;
 
         @include tablet {
-        
-            @include font-page-header-desktop;
-            padding-top: 48px   ;
-            padding-bottom: 2.25rem;
+            align-content: center;
+            margin: 8rem auto 0rem 1.6rem;
+            @include font-body-desktop;          
+            }
 
-        }
+            @include desktop{
+                @include font-body-desktop;
+            }
     
+        }
     }
 }
 
-
-
 .intro {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    @include tablet {
+        margin: 2.25rem;
+    }
     
-
-    &__text {
-        color: $primary-color-black;
-        padding-bottom: 16px;
-        @include font-subheader-mobile;
+    &__text{
 
         @include tablet {
             @include font-subheader-desktop;
-        }   
+        }
+        @include desktop{
+            margin: 2.25rem;
+            @include font-subheader-desktop;
+        }
+        }
+    
+
+    &__text1{
+        color: $primary-color-black;
+        padding-bottom: 1rem;
+        @include font-section-header-desktop;
+        
+
+        @include tablet {
+            @include font-section-header-desktop;
+            margin: 1.6rem auto auto auto;
+        } 
+        @include desktop{
+            @include font-section-header-desktop;
+        }
     }
 
     &__photo {
         width: 100%;
-        padding-bottom: 16px;    
+        padding-bottom: 1rem;    
     }
 
     &__title {
+        margin: 1.6rem auto auto auto;
         color: $primary-color-black;
-        margin-bottom: 16px;
-        padding-top: 24px;
+        margin-bottom: 1rem;
+        padding-top: 1.5rem;
         @include font-section-header-mobile;
 
         @include tablet {
             @include font-section-header-desktop;
-        }   
+            margin: 1.6rem 0rem;
+        } 
+        @include desktop{
+            @include font-section-header-desktop;
+        }
     }
 }
 
+.bio-section {
+
+    &__paragraph 
+        {
+            @include font-body-mobile;
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin: auto;
+    
+            @include tablet
+                {
+            @include font-body-desktop;
+            flex-direction: row;
+            padding: 0rem 1.5rem 0rem 0rem;
+                }
+            @include desktop{
+                @include font-body-desktop
+            }
+    
+    &--text 
+                {
+                @include font-body-mobile;
+                color: $primary-color-black;
+                padding-bottom: 1rem;
+                padding-right: 1.5rem;
+                padding-left: 1.5rem;
+            
+            @include tablet
+                {
+                    @include font-body-desktop;
+                }
+            @include desktop{
+                @include font-body-desktop
+            }
+            }
+
+    &__title 
+            {
+            color: $primary-color-black;
+            padding-left: 1rem;
+            @include font-subheader-mobile;
+
+            @include tablet {
+            margin: 2.25rem;
+            @include font-subheader-desktop;
+            }
+            @include desktop{
+                @include font-subheader-desktop
+            }
+        
+
+
+    }
+}
+}
 
 .photo-gallery {
-    padding: 16px;
-    background-color: 
-    $secondary-color-alabaster;
+    padding: 1rem;
+    background-color:$secondary-color-alabaster;
     
     &__container {
         display: flex;
@@ -226,12 +299,20 @@ a {
         flex-wrap: wrap;
         width: 100%;
         justify-content: space-around;
+        margin: 1rem;
         
     }
 
     &__title {
         color: $primary-color-black;
-        padding-bottom: 16px;
+        padding-bottom: 1rem;
+        @include font-body-mobile;
+        @include tablet{
+            @include font-body-desktop;
+        }
+        @include desktop{
+            @include font-body-desktop
+        }
     }
     
     &__image {
@@ -246,87 +327,97 @@ a {
 }
 .comment-container{
     display:flex;
-    flex-direction:column;
+    flex-direction: column;
+    margin: 1rem;
 
 }
 .comment-new {
     display:flex;
-    border-bottom:1px solid $secondary-color-mercury;
+    border-bottom:.0625rem solid $secondary-color-mercury;
 
-    @include tablet{
+    @include tablet
+        {
         display: flex;
-        border-bottom: 1px solid;
+        border-bottom: .0625rem solid;
         flex-direction: row;
         justify-content: center;
+        }
+
+    @include desktop{
+     @include font-body-desktop;   
     }
 
-    &__avatar {
-        margin-top:20px;
+    &__avatar 
+        {
+        margin-top:1.25rem;
         background-color:$secondary-color-mercury;
-        border-radius:100px;
-        width:48px;
-        height:48px
+        border-radius:6.25rem;
+        width:3rem;
+        height:3rem
+        }
 
-    }
-
-    &__form {
+    &__form 
+        {
         display:flex;
         flex-direction:column;
-        margin-left: 16px
-    }
+        margin-left: 1rem
+        }
 
-    &__form-area {
-        padding: 12px;
+    &__form-area 
+        {
+        padding: .75rem;
         width: 100%;
         font-family: avenir-regular;
-        border-radius:4px;
-        border:2px solid $secondary-color-mercury;
+        border-radius:.25rem;
+        border:.125rem solid $secondary-color-mercury;
         background-color: $secondary-color-alabaster;
         padding-top: 0 ;
-        padding-bottom: 16px;
-        margin-bottom: 16px;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
 
-    }
+        }
 
-    &__form-button {
+    &__form-button 
+        {
         
-        border-radius:4px;
+        border-radius:.25rem;
         background-color: $primary-color-black ;
         color:$primary-color-white;
-        padding:16px;
+        padding:1rem;
         border:none;
         cursor: pointer;
-        margin-bottom:24px;
+        margin-bottom:1.5rem;
 
-        @include tablet{
-            width: 150px;
-        }
+        @include tablet
+            {
+            width: 9.375rem;
+            }
 
-        @include desktop{
-            width: 150px; 
-        }
+        @include desktop
+            {
+            width: 9.375rem; 
+            }
     }
 
     &__form-name {
-        padding: 12px;
-        border-radius: 4px;
+        padding: .75rem;
+        border-radius: .25rem;
         width: 100%;
         display: flex;
         justify-content: space-between;
         font-family: avenir-regular;
-        border:2px solid $secondary-color-mercury;
+        border:.125rem solid $secondary-color-mercury;
         background-color: $secondary-color-alabaster;
     }
 
-    &__label {}
 }
 
 .comment {
     &__avatar {
-        width: 36px;
-        height: 36px;
+        width: 2.25rem;
+        height: 2.25rem;
         border-radius: 50%;
-        margin-top: 22.4px;
+        margin-top: 1.4rem;
         background-color:$secondary-color-mercury;
         background-size: cover;
         background-position: center;
@@ -334,17 +425,15 @@ a {
     }
 
     &__image {
-        width: 36px;
-        height: 36px;
-        border-radius: 32px;
-        margin-top: 22.4px;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 2rem;
+        margin-top: 1.4rem;
     }
 
     &__content {
-        border-bottom: 1px solid $secondary-color-mercury;
-        
-        
-    
+        border-bottom: .0625rem solid $secondary-color-mercury;
+
     }
 
     &__date {
@@ -352,48 +441,60 @@ a {
             @include font-body-mobile;
 
         }
-        @include desktop{
+        @include desktop
+            {
             @include font-body-desktop;
 
-        }
+            }
     }
 
     &__name {
-        @include tablet{
+        @include tablet
+            {
             @include font-body-mobile;
 
-        }
-        @include desktop{
+            }
+        @include desktop
+            {
             @include font-body-desktop;
 
-        }
+            }
     }
 
     &__text {
-        @include tablet{
+        @include tablet
+                {
             @include font-body-mobile;
 
-        }
-        @include desktop{
+            }
+        @include desktop
+            {
             @include font-body-desktop;
 
-        }
+            }
 
     }
 
     &--newest {
 
-        @include tablet{
+        @include tablet
+            {
+            display: flex;
+            flex-direction: row;
             @include font-body-mobile;
-            padding-top: 24px;
-            padding-bottom: 24px;
-            padding-left: 18px;
-            padding-right: 18px;
-        }
-        @include desktop{
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            padding-left: 1.125rem;
+            padding-right: 1.125rem;
+            }
+        @include desktop
+            {
+            display: flex;
+            flex-direction: row;
+                
             @include font-body-desktop;
 
-        }
+            }
     }
 }
 
@@ -404,75 +505,106 @@ a {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding-left: 16px;
-    padding-top: 16px;
+    padding-left: 1rem;
+    padding-top: 1rem;
     @include font-footer-mobile;
-    
-        @include tablet {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-        }
 
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
 
     &__social-media {
-        padding-top: 16px;
-        padding-bottom: 16px;
-        
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
 
         &--section {
             display: flex;
             flex-direction: column;
-            
+            @include tablet{
+
+            }
+            @include desktop{
+                display: flex;
+                flex-direction: row;    
+            }
         }
     }
-    &__social-media-icons {
-        padding-right:32px;
-    }
 
-    &__title {
+    &__social-media-icons 
+        {
+        padding-right: 2rem;
+        }
+        @include tablet{
+
+        }
+        @include desktop{
+            display: flex;
+            flex-direction: row;    
+        }
+
+    &__title 
+        {
         display: flex;
         flex-direction: column;
-        padding-bottom: 16px;
-        padding-top: 16px;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
         @include font-footer-mobile;
-    }
+        }
+        @include tablet{
+
+        }
+        @include desktop{
+            display: flex;
+            flex-direction: row;    
+        }
 }
 
 .footer-cam {
 
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
 
-    &__location {
+    &__location 
+        {
         display: flex;
         flex-direction: column;
-        padding-bottom: 16px;
-        padding-top: 16px;
-    }
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        }
 
-    &__name-company {
+    &__name-company 
+        {
         display: flex;
         flex-direction: column;
-        padding-bottom: 16px;
-        padding-top: 16px;
-    }
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        }
 }
 
 .footer-carson {
 
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
         &__location {
             display: flex;
             flex-direction: column;
-            padding-bottom: 16px;
+            padding-bottom: 1rem;
             
         }
 
         &__name-company {
             display: flex;
             flex-direction: column;
-            padding-bottom: 16px;
+            padding-bottom: 1rem;
             
         }
 }
@@ -481,18 +613,18 @@ a {
 
     display: flex;
     flex-direction: column;
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
         &__location {
             display: flex;
             flex-direction: column;
-            padding-bottom: 16px;
+            padding-bottom: 1rem;
         
         }
 
         &__name-company {
             display: flex;
             flex-direction: column;
-            padding-bottom: 16px;
+            padding-bottom: 1rem;
             
         }
 }
@@ -501,10 +633,11 @@ a {
     display: flex;
     width: 40%;
     justify-content: space-between;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
         &__icons {
-            padding-top: 16px;
+            padding-top: 1rem;
         
+        }
+
     }
-}
