@@ -124,8 +124,27 @@ a {
 }
 .hero__title {
   color: #FFFFFF;
-  font-family: Avenir Next Regular;
+  font-family: "Avenir Next";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
   padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    font-family: "Avenir Next";
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    font-family: "Avenir Next Bold";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
 }
 
 .bio-section {
@@ -172,6 +191,14 @@ a {
   .bio-section__paragraph__title {
     align-content: center;
     margin: 8rem auto 0rem 1.6rem;
+    font-family: "Avenir Next ";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .bio-section__paragraph__title {
     font-family: "Avenir Next ";
     font-size: 0.875rem;
     line-height: 1.375rem;
@@ -253,6 +280,14 @@ a {
     margin: 1.6rem 0rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .intro__title {
+    font-family: "Avenir Next Bold";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+}
 
 .bio-section__paragraph {
   font-family: "Avenir Next ";
@@ -274,6 +309,14 @@ a {
     padding: 0rem 1.5rem 0rem 0rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .bio-section__paragraph {
+    font-family: "Avenir Next ";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
 .bio-section__paragraph--text {
   font-family: "Avenir Next ";
   font-size: 0.8125rem;
@@ -285,6 +328,14 @@ a {
   padding-left: 1.5rem;
 }
 @media screen and (min-width: 768px) {
+  .bio-section__paragraph--text {
+    font-family: "Avenir Next ";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1024px) {
   .bio-section__paragraph--text {
     font-family: "Avenir Next ";
     font-size: 0.875rem;
@@ -309,6 +360,14 @@ a {
     font-weight: 600;
   }
 }
+@media screen and (min-width: 1024px) {
+  .bio-section__paragraph__title {
+    font-family: "Avenir Next";
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+}
 
 .photo-gallery {
   padding: 1rem;
@@ -320,6 +379,7 @@ a {
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-around;
+  margin: 1rem;
 }
 .photo-gallery__title {
   color: #323232;
@@ -330,6 +390,14 @@ a {
   font-weight: 400;
 }
 @media screen and (min-width: 768px) {
+  .photo-gallery__title {
+    font-family: "Avenir Next ";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1024px) {
   .photo-gallery__title {
     font-family: "Avenir Next ";
     font-size: 0.875rem;
@@ -351,6 +419,7 @@ a {
 .comment-container {
   display: flex;
   flex-direction: column;
+  margin: 1rem;
 }
 
 .comment-new {
@@ -363,6 +432,14 @@ a {
     border-bottom: 0.0625rem solid;
     flex-direction: row;
     justify-content: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .comment-new {
+    font-family: "Avenir Next ";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
   }
 }
 .comment-new__avatar {

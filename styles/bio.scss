@@ -115,8 +115,14 @@ a {
     }
     &__title {
         color: $primary-color-white;
-        font-family: Avenir Next Regular;
+        @include font-page-header-mobile;
         padding: 1rem;
+        }
+        @include tablet{
+            @include font-page-header-desktop;
+        }
+        @include desktop{
+            @include font-section-header-desktop
         }
 
 }
@@ -160,6 +166,10 @@ a {
             align-content: center;
             margin: 8rem auto 0rem 1.6rem;
             @include font-body-desktop;          
+            }
+
+            @include desktop{
+                @include font-body-desktop;
             }
     
         }
@@ -215,7 +225,10 @@ a {
         @include tablet {
             @include font-section-header-desktop;
             margin: 1.6rem 0rem;
-        }   
+        } 
+        @include desktop{
+            @include font-section-header-desktop;
+        }
     }
 }
 
@@ -235,6 +248,9 @@ a {
             flex-direction: row;
             padding: 0rem 1.5rem 0rem 0rem;
                 }
+            @include desktop{
+                @include font-body-desktop
+            }
     
     &--text 
                 {
@@ -248,7 +264,9 @@ a {
                 {
                     @include font-body-desktop;
                 }
-        
+            @include desktop{
+                @include font-body-desktop
+            }
             }
 
     &__title 
@@ -260,8 +278,11 @@ a {
             @include tablet {
             margin: 2.25rem;
             @include font-subheader-desktop;
-
-        }
+            }
+            @include desktop{
+                @include font-subheader-desktop
+            }
+        
 
 
     }
@@ -278,6 +299,7 @@ a {
         flex-wrap: wrap;
         width: 100%;
         justify-content: space-around;
+        margin: 1rem;
         
     }
 
@@ -287,6 +309,9 @@ a {
         @include font-body-mobile;
         @include tablet{
             @include font-body-desktop;
+        }
+        @include desktop{
+            @include font-body-desktop
         }
     }
     
@@ -303,7 +328,7 @@ a {
 .comment-container{
     display:flex;
     flex-direction: column;
-    
+    margin: 1rem;
 
 }
 .comment-new {
@@ -319,7 +344,7 @@ a {
         }
 
     @include desktop{
-        
+     @include font-body-desktop;   
     }
 
     &__avatar 
