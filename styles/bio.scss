@@ -12,7 +12,7 @@
 
 .photo {
     width: 100%;
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
 }
 
 a {
@@ -33,7 +33,7 @@ a {
         width: 100%;
         
         @include tablet {
-            padding-left: 24px;
+            padding-left: 1.5rem;
             flex-direction: row;
             justify-content: space-evenly;
             align-content: space-evenly;
@@ -41,10 +41,10 @@ a {
     }
 
     &__img {
-        max-height: 20px;
-        max-width: 120px;
-        margin: 16px;
-        padding-bottom: 16px;
+        max-height: 1.25rem;
+        max-width: 7.5rem;
+        margin: 1rem;
+        padding-bottom: 1rem;
     }
 }
 
@@ -117,13 +117,14 @@ a {
         color: $primary-color-white;
         font-family: Avenir Next Regular;
         padding: 1rem;
-    }
+        }
+
 }
 
 
 .bio-section {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 1rem;
+    margin-right: 1rem;
     
     
     &__paragraph {
@@ -169,7 +170,7 @@ a {
     margin-left: 1rem;
     margin-right: 1rem;
     @include tablet {
-        margin: 36px;
+        margin: 2.25rem;
     }
     
     &__text{
@@ -194,7 +195,7 @@ a {
 
     &__photo {
         width: 100%;
-        padding-bottom: 16px;    
+        padding-bottom: 1rem;    
     }
 
     &__title {
@@ -250,7 +251,7 @@ a {
             @include font-subheader-mobile;
 
             @include tablet {
-            margin: 36px;
+            margin: 2.25rem;
             @include font-subheader-desktop;
 
         }
@@ -284,7 +285,7 @@ a {
     
     &__image {
         width: 100%;
-        padding-bottom: 1rem;
+        padding-bottom: 16px;
         
         @include tablet {
             display: flex;
@@ -294,35 +295,40 @@ a {
 }
 .comment-container{
     display:flex;
-    flex-direction:column;
+    flex-direction: column;
+    
 
 }
 .comment-new {
     display:flex;
-    border-bottom:1px solid $secondary-color-mercury;
+    border-bottom:.0625rem solid $secondary-color-mercury;
 
     @include tablet
         {
         display: flex;
-        border-bottom: 1px solid;
+        border-bottom: .0625rem solid;
         flex-direction: row;
         justify-content: center;
         }
 
+    @include desktop{
+        
+    }
+
     &__avatar 
         {
-        margin-top:20px;
+        margin-top:1.25rem;
         background-color:$secondary-color-mercury;
-        border-radius:100px;
-        width:48px;
-        height:48px
+        border-radius:6.25rem;
+        width:3rem;
+        height:3rem
         }
 
     &__form 
         {
         display:flex;
         flex-direction:column;
-        margin-left: 16px
+        margin-left: 1rem
         }
 
     &__form-area 
@@ -330,8 +336,8 @@ a {
         padding: .75rem;
         width: 100%;
         font-family: avenir-regular;
-        border-radius:4px;
-        border:2px solid $secondary-color-mercury;
+        border-radius:.25rem;
+        border:.125rem solid $secondary-color-mercury;
         background-color: $secondary-color-alabaster;
         padding-top: 0 ;
         padding-bottom: 1rem;
@@ -342,7 +348,7 @@ a {
     &__form-button 
         {
         
-        border-radius:4px;
+        border-radius:.25rem;
         background-color: $primary-color-black ;
         color:$primary-color-white;
         padding:1rem;
@@ -352,23 +358,23 @@ a {
 
         @include tablet
             {
-            width: 150px;
+            width: 9.375rem;
             }
 
         @include desktop
             {
-            width: 150px; 
+            width: 9.375rem; 
             }
     }
 
     &__form-name {
         padding: .75rem;
-        border-radius: 4px;
+        border-radius: .25rem;
         width: 100%;
         display: flex;
         justify-content: space-between;
         font-family: avenir-regular;
-        border:2px solid $secondary-color-mercury;
+        border:.125rem solid $secondary-color-mercury;
         background-color: $secondary-color-alabaster;
     }
 
@@ -376,10 +382,10 @@ a {
 
 .comment {
     &__avatar {
-        width: 36px;
-        height: 36px;
+        width: 2.25rem;
+        height: 2.25rem;
         border-radius: 50%;
-        margin-top: 22.4px;
+        margin-top: 1.4rem;
         background-color:$secondary-color-mercury;
         background-size: cover;
         background-position: center;
@@ -387,14 +393,14 @@ a {
     }
 
     &__image {
-        width: 36px;
-        height: 36px;
-        border-radius: 32px;
-        margin-top: 22.4px;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 2rem;
+        margin-top: 1.4rem;
     }
 
     &__content {
-        border-bottom: 1px solid $secondary-color-mercury;
+        border-bottom: .0625rem solid $secondary-color-mercury;
 
     }
 
@@ -441,6 +447,8 @@ a {
 
         @include tablet
             {
+            display: flex;
+            flex-direction: row;
             @include font-body-mobile;
             padding-top: 1.5rem;
             padding-bottom: 1.5rem;
@@ -449,6 +457,9 @@ a {
             }
         @include desktop
             {
+            display: flex;
+            flex-direction: row;
+                
             @include font-body-desktop;
 
             }
@@ -472,7 +483,13 @@ a {
         justify-content: space-around;
         align-items: center;
     }
-
+    
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
 
     &__social-media {
         padding-top: 1rem;
@@ -482,13 +499,26 @@ a {
         &--section {
             display: flex;
             flex-direction: column;
+            @include tablet{
 
+            }
+            @include desktop{
+                display: flex;
+                flex-direction: row;    
+            }
         }
     }
 
     &__social-media-icons 
         {
-        padding-right: 32px;
+        padding-right: 2rem;
+        }
+        @include tablet{
+
+        }
+        @include desktop{
+            display: flex;
+            flex-direction: row;    
         }
 
     &__title 
@@ -498,6 +528,13 @@ a {
         padding-bottom: 1rem;
         padding-top: 1rem;
         @include font-footer-mobile;
+        }
+        @include tablet{
+
+        }
+        @include desktop{
+            display: flex;
+            flex-direction: row;    
         }
 }
 

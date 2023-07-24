@@ -31,19 +31,21 @@ a {
         align-content: center;
         align-items: center;
         width: 100%;
-
-        &__img {
-            padding-bottom: .5rem;
-            padding-top: 1rem;
-        }
-
+        
         @include tablet {
+            padding-left: 24px;
             flex-direction: row;
             justify-content: space-evenly;
             align-content: space-evenly;
         }
     }
 
+    &__img {
+        max-height: 20px;
+        max-width: 120px;
+        margin: 16px;
+        padding-bottom: 16px;
+    }
 }
 
 .nav {
@@ -51,9 +53,11 @@ a {
     list-style: none;
     padding: 0;
     width: 100%;
-    @include tablet {
-        height: 15vh;
+    @include tablet{
+        height: 11vh;
+        align-items: flex-end;
     }
+
 
     &__menu {
         list-style: none;
@@ -73,16 +77,11 @@ a {
         text-align: center;
         padding-bottom: 1rem;
         
-
-
-
-
-
         @include tablet {
-            width: 20%;
+            align-items: center;
+            width: 25%;
         }
     }
-
     &__menu-item--underline {
         border-bottom: solid;
         color: $primary-color-white;
