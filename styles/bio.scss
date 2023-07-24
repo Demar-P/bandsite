@@ -32,11 +32,6 @@ a {
         align-items: center;
         width: 100%;
         
-        // &__img {
-        //     padding-bottom: 8px; 
-        //     padding-top: 16px;
-        // }
-        
         @include tablet {
             padding-left: 24px;
             flex-direction: row;
@@ -101,21 +96,21 @@ a {
 
 
 
-.hero__overlay {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #323232(0,0,0,0.5);
-}
+// .hero__overlay {
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background-color: #323232(0,0,0,0.5);
+// }
 
-.hero__overlay{
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #323232(0,0,0,0.5);
-}
+// .hero__overlay{
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background-color: #323232(0,0,0,0.5);
+// }
 .hero {
     display: flex;
     
@@ -157,7 +152,7 @@ a {
             flex-direction: row;
             @include font-body-desktop;
             padding-left: 1.5rem;
-            padding-right: 1.ß5rem;
+            padding-right: 1.5rem;
         }
 
 
@@ -166,7 +161,7 @@ a {
             color: $primary-color-black;
             padding-bottom: 1rem;
             padding-right: 1.5rem;
-            padding-left: 1.ß5rem;
+            padding-left: 1.5rem;
         }
     }
 
@@ -178,9 +173,7 @@ a {
         @include tablet {
             align-content: center;
             margin: 8rem auto 0rem 1.6rem;
-            @include font-page-header-desktop;
-            
-
+            @include font-body-desktop;          
         }
     
     }
@@ -196,21 +189,17 @@ a {
     }
     
     &__text1{
-        @include mobile{
-            // @include font-section-header-desktop;
-        }
+
         @include tablet {
             @include font-subheader-desktop;
         }
         }
-    }
+    
 
-    &__text {
+    &__text{
         color: $primary-color-black;
         padding-bottom: 1rem;
         @include font-subheader-mobile;
-        color: $primary-color-black;
-        
         
 
         @include tablet {
@@ -274,22 +263,16 @@ a {
         @include tablet {
             margin: 36px;
             @include font-subheader-desktop;
-            // padding-top: 3rem;
-            // padding-bottom: 2.25rem;
+
         }
 
 
     }
 }
 
-
-
-
-
 .photo-gallery {
     padding: 1rem;
-    background-color: 
-    $secondary-color-alabaster;
+    background-color:$secondary-color-alabaster;
     
     &__container {
         display: flex;
@@ -328,29 +311,32 @@ a {
     display:flex;
     border-bottom:1px solid $secondary-color-mercury;
 
-    @include tablet{
+    @include tablet
+        {
         display: flex;
         border-bottom: 1px solid;
         flex-direction: row;
         justify-content: center;
-    }
+        }
 
-    &__avatar {
+    &__avatar 
+        {
         margin-top:20px;
         background-color:$secondary-color-mercury;
         border-radius:100px;
         width:48px;
         height:48px
+        }
 
-    }
-
-    &__form {
+    &__form 
+        {
         display:flex;
         flex-direction:column;
         margin-left: 16px
-    }
+        }
 
-    &__form-area {
+    &__form-area 
+        {
         padding: .75rem;
         width: 100%;
         font-family: avenir-regular;
@@ -361,9 +347,10 @@ a {
         padding-bottom: 1rem;
         margin-bottom: 1rem;
 
-    }
+        }
 
-    &__form-button {
+    &__form-button 
+        {
         
         border-radius:4px;
         background-color: $primary-color-black ;
@@ -373,13 +360,15 @@ a {
         cursor: pointer;
         margin-bottom:1.5rem;
 
-        @include tablet{
+        @include tablet
+            {
             width: 150px;
-        }
+            }
 
-        @include desktop{
+        @include desktop
+            {
             width: 150px; 
-        }
+            }
     }
 
     &__form-name {
@@ -393,9 +382,6 @@ a {
         background-color: $secondary-color-alabaster;
     }
 
-    // &__label {
-
-    // }
 }
 
 .comment {
@@ -419,9 +405,7 @@ a {
 
     &__content {
         border-bottom: 1px solid $secondary-color-mercury;
-        
-        
-    
+
     }
 
     &__date {
@@ -429,48 +413,55 @@ a {
             @include font-body-mobile;
 
         }
-        @include desktop{
+        @include desktop
+            {
             @include font-body-desktop;
 
-        }
+            }
     }
 
     &__name {
-        @include tablet{
+        @include tablet
+            {
             @include font-body-mobile;
 
-        }
-        @include desktop{
+            }
+        @include desktop
+            {
             @include font-body-desktop;
 
-        }
+            }
     }
 
     &__text {
-        @include tablet{
+        @include tablet
+                {
             @include font-body-mobile;
 
-        }
-        @include desktop{
+            }
+        @include desktop
+            {
             @include font-body-desktop;
 
-        }
+            }
 
     }
 
     &--newest {
 
-        @include tablet{
+        @include tablet
+            {
             @include font-body-mobile;
             padding-top: 1.5rem;
             padding-bottom: 1.5rem;
             padding-left: 1.125rem;
             padding-right: 1.125rem;
-        }
-        @include desktop{
+            }
+        @include desktop
+            {
             @include font-body-desktop;
 
-        }
+            }
     }
 }
 
@@ -484,56 +475,61 @@ a {
     padding-left: 1rem;
     padding-top: 1rem;
     @include font-footer-mobile;
-    
-        @include tablet {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-        }
+
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 
 
     &__social-media {
         padding-top: 1rem;
         padding-bottom: 1rem;
-        
+
 
         &--section {
             display: flex;
             flex-direction: column;
-            
+
         }
     }
-    &__social-media-icons {
-        padding-right:32px;
-    }
 
-    &__title {
+    &__social-media-icons 
+        {
+        padding-right: 32px;
+        }
+
+    &__title 
+        {
         display: flex;
         flex-direction: column;
         padding-bottom: 1rem;
         padding-top: 1rem;
         @include font-footer-mobile;
-    }
+        }
 }
 
 .footer-cam {
 
     padding-bottom: 1rem;
 
-    &__location {
+    &__location 
+        {
         display: flex;
         flex-direction: column;
         padding-bottom: 1rem;
         padding-top: 1rem;
-    }
+        }
 
-    &__name-company {
+    &__name-company 
+        {
         display: flex;
         flex-direction: column;
         padding-bottom: 1rem;
         padding-top: 1rem;
-    }
+        }
 }
 
 .footer-carson {
@@ -583,5 +579,6 @@ a {
         &__icons {
             padding-top: 1rem;
         
-    }
+        }
 }
+
