@@ -156,9 +156,11 @@ a {
     }
 
     &__title {
+        @include font-subheader-mobile;
         padding-bottom: 2.5rem;
 
         @include desktop {
+            @include font-subheader-desktop;
             padding-top: 0;
         }
     }
@@ -209,36 +211,6 @@ a {
         }
     }
     }
-
-    // &__cta {
-    //     border-radius: 0.25rem;
-    //     background-color: #323232;
-    //     color: #ffffff;
-    //     padding: 1rem 0;
-    //     border: none;
-    //     cursor: pointer;
-    //     margin-bottom: 1rem;
-    //     width: 18rem;
-    //     margin-top: 2rem;
-
-    //     @include tablet {
-    //         margin-bottom: 1.5rem;
-    //     }
-
-    //     @include tablet {
-    //         margin-top: 0;
-    //         margin-bottom: 1rem;
-    //         width: 10rem;
-    //         align-self: flex-end;
-    //     }
-    // }
-
-    // &__cta:hover {
-    //     background-color: black;
-    // }
-
-
-
 
 
     .footer {
